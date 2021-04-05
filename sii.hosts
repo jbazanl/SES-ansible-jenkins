@@ -1,0 +1,45 @@
+[test]
+localhost ansible_connection=local files='["/opt/sitios/sii/configuracion/common16OLD2.php"]'
+
+[production]
+172.16.12.147 files='["/opt/sitios/sii/configuracion/common56.php","/opt/sitios/sii/configuracion/common16.php","/opt/sitios/sii/configuracion/common32.php","/opt/sitios/sii/configuracion/common10.php","/opt/sitios/sii/configuracion/common52.php","/opt/sitios/sii/configuracion/common18.php","/opt/sitios/sii/configuracion/common57.php","/opt/sitios/sii/configuracion/common34.php"]'
+172.16.10.14 files='["/opt/sitios/sii/configuracion/common20.php","/opt/sitios/sii/configuracion/common54.php","/opt/sitios/sii/configuracion/common33.php","/opt/sitios/sii/configuracion/common49.php","/opt/sitios/sii/configuracion/common44.php","/opt/sitios/sii/configuracion/common39.php"]'
+172.16.12.189 files='["/opt/sitios/sii/configuracion/common19.php","/opt/sitios/sii/configuracion/common35.php","/opt/sitios/sii/configuracion/common45.php","/opt/sitios/sii/configuracion/common53.php","/opt/sitios/sii/configuracion/common41.php","/opt/sitios/sii/configuracion/common47.php"]'
+172.16.12.183 files='["/opt/sitios/sii/configuracion/common02.php","/opt/sitios/sii/configuracion/common22.php","/opt/sitios/sii/configuracion/common51.php","/opt/sitios/sii/configuracion/common15.php","/opt/sitios/sii/configuracion/common14.php","/opt/sitios/sii/configuracion/common50.php"]'
+172.16.10.21 files='["/opt2/sitios/sii/configuracion/common23.php"]'
+172.16.10.101 files='["/opt/sitios/sii/configuracion/common28.php","/opt/sitios/sii/configuracion/common48.php","/opt/sitios/sii/configuracion/common40.php"]'
+172.16.10.214 files='["/opt/sitios/sii/configuracion/common01.php","/opt/sitios/sii/configuracion/common38.php","/opt/sitios/sii/configuracion/common31.php","/opt/sitios/sii/configuracion/common30.php","/opt/sitios/sii/configuracion/common25.php","/opt/sitios/sii/configuracion/common13.php","/opt/sitios/sii/configuracion/common42.php","/opt/sitios/sii/configuracion/common12.php"]'
+172.16.10.50 files='["/opt/sitios/sii/configuracion/common11.php"]'
+172.16.12.6 files='["/opt/sitios/sii/configuracion/common55.php"]'
+172.16.10.11 files='["/opt/sitios/sii/configuracion/common27.php"]'
+172.16.10.6 files='["/opt/sitios/sii/configuracion/common43.php","/opt/sitios/sii/configuracion/common36.php","/opt/sitios/sii/configuracion/common07.php","/opt/sitios/sii/configuracion/common06.php","/opt/sitios/sii/configuracion/common24.php","/opt/sitios/sii/configuracion/common26.php","/opt/sitios/sii/configuracion/common46.php","/opt/sitios/sii/configuracion/common37.php","/opt/sitios/sii/configuracion/common17.php"]'
+
+[production:vars]
+ansible_connection=ssh
+ansible_user=ubuntu
+
+[production_IP_RUTA]
+172.16.12.147 ruta='/opt/sitios/sii/configuracion/*'
+172.16.10.14 ruta='/opt/sitios/sii/configuracion/*'
+172.16.12.189 ruta='/opt/sitios/sii/configuracion/*'
+172.16.12.183 ruta='/opt/sitios/sii/configuracion/*'
+172.16.10.21 ruta='/opt/sitios/sii/configuracion/*'
+172.16.10.101 ruta='/opt/sitios/sii/configuracion/*'
+172.16.10.214 ruta='/opt/sitios/sii/configuracion/*'
+172.16.10.50 ruta='/opt/sitios/sii/configuracion/*'
+172.16.12.6 ruta='/opt/sitios/sii/configuracion/*'
+172.16.10.11 ruta='/opt/sitios/sii/configuracion/*'
+172.16.10.6 ruta='/opt/sitios/sii/configuracion/*'
+
+[production_IP_RUTA:vars]
+ansible_connection=ssh
+ansible_user=ubuntu
+ansible_ssh_private_key_file=/home/jbazan/confecamaras.key
+
+[batch]
+172.16.10.153 path=["/opt/sitios/sii/configuracion/*"]
+34.231.82.35 path=["/opt/sitios/sii/configuracion/*"]
+
+[batch:vars]
+ansible_connection=ssh
+ansible_user=ubuntu
