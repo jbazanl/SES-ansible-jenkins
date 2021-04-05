@@ -1,0 +1,14 @@
+---
+- hosts: production_IP_RUTA
+  become: true
+  become_user: ubuntu
+  tasks:
+    - name: Grep por sipp.aws
+      shell: grep -r "http://sippaws" /opt/sitios/sii/configuracion/
+      with_items: "{{ ruta }}"
+      register: res_sipp
+
+    - name: Muestra resultados de sipp.aws
+      debug:
+        msg: '{{ item.stdout }}'
+      with_items: "{{ res_sipp.results }}"
